@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<p id = "Answer"></p>
+<script>
+    const year = prompt("Insert a year: ")
+    if (year % 4 == 0 && year % 100 != 0)
+    {
+        document.querySelector('#Answer').innerHTML = "The year " + year + " is a leap year."
+    }
+    else if (year % 100 == 0 && year % 400 == 0)
+    {
+        document.querySelector('#Answer').innerHTML = "The year " + year + " is a leap year."
+    }
+    else
+    {
+        document.querySelector('#Answer').innerHTML = "The year " + year + " isn't a leap year."
+    }
+</script>
+</body>
+</html>

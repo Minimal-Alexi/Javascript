@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<ul id="year_list">
+</ul>
+<script>
+    function LeapYear(year)
+    {
+      if (year % 4 == 0 && year % 100 != 0)
+      {
+        return true
+      }
+    else if (year % 100 == 0 && year % 400 == 0)
+      {
+        return true
+      }
+    else
+      {
+        return false
+      }
+    }
+    const startyear = prompt("Please enter a starting year."),endyear = prompt("Please enter a final date")
+    for (let i = startyear;i<=endyear;++i)
+    {
+        if (LeapYear(i)==true)
+        {
+            const listitems = document.createElement('li');
+            listitems.textContent = i;
+            year_list.appendChild(listitems)
+        }
+    }
+</script>
+</body>
+</html>

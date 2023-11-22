@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<p id = "answer"></p>
+<script>
+    function getRandomInt(min, max) {
+            min = Math.ceil(min);
+            max = Math.floor(max);
+            return Math.floor(Math.random() * (max - min) + min);
+        }
+    const dicenr = prompt("Insert the number of dice: ");
+    let sum = 0;
+    for(let i=1;i<=dicenr;++i)
+    {
+        sum = sum + getRandomInt(1,6);
+    }
+    document.querySelector("#answer").innerHTML = "The total of the dice is: "+ sum;
+</script>
+</body>
+</html>

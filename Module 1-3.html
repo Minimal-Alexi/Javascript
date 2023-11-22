@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <p id="sum"></p>
+    <p id="product"></p>
+    <p id="average"></p>
+    <script>
+        let n1 = prompt('Insert the first number:'),n2 = prompt('Insert the second number:'),n3 = prompt('Insert the third number:');
+        n1 = parseInt(n1)
+        n2 = parseInt(n2)
+        n3 = parseInt(n3)
+        const s = n1+n2+n3,p = n1*n2*n3,avg = (n1+n2+n3)/3
+        document.querySelector('#sum').innerHTML = 'The sum is: ' + s;
+        document.querySelector('#product').innerHTML = 'The product is: ' + p;
+        document.querySelector('#average').innerHTML = 'The average is: ' + avg;
+    </script>
+</body>
+</html>

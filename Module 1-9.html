@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<p id = 'Result'></p>
+<script>
+    const number = prompt("Insert your number.");
+    let isprime = true;
+    for (i=2;i<=number/2 && isprime == true;++i)
+    {
+        if(number%i == 0)
+        {
+          isprime = false;
+        }
+    }
+    if (isprime== true)
+    {
+      document.querySelector('#Result').innerHTML = "The number" + number + " is prime.";
+    }
+    else
+    {
+      document.querySelector('#Result').innerHTML = "The number" + number + " isn't prime.";
+    }
+</script>
+</body>
+</html>

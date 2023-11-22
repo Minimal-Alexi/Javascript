@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<p id="answer"></p>
+<script>
+    function getRandomInt(min, max)
+        {
+            min = Math.ceil(min);
+            max = Math.floor(max);
+            return Math.floor(Math.random() * (max - min) + min);
+        }
+    const nrdices = prompt("Insert the number of dices"),result = prompt("Insert the total dot count");
+    let answer = 0;
+    for (let i = 1; i <= 10000; ++i)
+    {
+        testdicesum = 0;
+        for(j = 1; j <= nrdices;++j)
+        {
+            testdicesum = testdicesum + getRandomInt(1,6);
+        }
+        if(testdicesum == result)
+        {
+            answer++;
+        }
+    }
+    answer = answer/10000*100;
+    answer = answer.toFixed(2)
+    document.querySelector('#answer').innerHTML = "The probability to roll that set of dices is: "+answer+"%";
+</script>
+</body>
+</html>

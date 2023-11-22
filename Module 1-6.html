@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<p id = "Answer"></p>
+<script>
+    const Do = confirm("Do you want to calculate the square root?")
+    if (Do == true)
+    {
+        const value = prompt("Insert a number")
+        if(value < 0)
+        {
+            document.querySelector("#Answer").innerHTML = "The square root of a negative number is not defined"
+        }
+        else
+        {
+            document.querySelector("#Answer").innerHTML = "The square root is: " + Math.sqrt(value)
+        }
+    }
+    else
+    {
+        document.querySelector("#Answer").innerHTML = "The square root is not calculated."
+    }
+</script>
+</body>
+</html>
