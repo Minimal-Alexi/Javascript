@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<ol id = "answer">
+
+</ol>
+<script>
+    // Initially I had wanted to make this an array, but I swear to god there's no other way to do it than this way.
+    // Sorry teach, but if there's another way to do this, stack overflow failed me.
+    let participants = "",nr_participants = prompt("Insert number of participants");
+    for(let i = 0; i < nr_participants; ++i)
+    {
+        let x = prompt("Insert user");
+        participants += "<li>"+ x + "</li>";
+    }
+    document.getElementById('answer').innerHTML = participants;
+</script>
+</body>
+</html>

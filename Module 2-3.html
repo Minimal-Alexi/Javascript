@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<ul id = "answer">
+
+</ul>
+<script>
+    // Initially I had wanted to make this an array, but I swear to god there's no other way to do it than this way.
+    // Sorry teach, but if there's another way to do this, stack overflow failed me.
+    let dogs = [],dog_list = "";
+    for(let i = 0; i < 5; ++i)
+    {
+        let x = prompt("Insert doggo");
+        dogs.push(x);
+    }
+    dogs.sort().reverse()
+    for(let i = 0; i < 5; ++i)
+    {
+        dog_list+="<li>" + dogs[i] + "</li>";
+    }
+    document.getElementById('answer').innerHTML = dog_list;
+</script>
+</body>
+</html>

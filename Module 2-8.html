@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<ul id="target">
+
+</ul>
+<script>
+    function concat(array)
+    {
+        let result = "";
+        for(let i = 0;i<array.length;++i)
+        {
+            result = result + array[i]
+        }
+        return result;
+    }
+    let strings = ["Minerva","Peggy","Delicious","Nom"]
+    console.log(concat(strings));
+</script>
+</body>
+</html>

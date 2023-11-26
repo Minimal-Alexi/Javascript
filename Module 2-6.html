@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<ul id="target">
+
+</ul>
+<script>
+    function getRandomInt(max) {
+            let min = 1;
+            max = max + 1;
+            min = Math.ceil(min);
+            max = Math.floor(max);
+            return Math.floor(Math.random() * (max - min) + min);
+        }
+    const sides = 6;
+    let dice = getRandomInt(sides), dice_list = [dice],html = "";
+    while(dice != sides)
+    {
+        dice = getRandomInt(sides);
+        dice_list.push(dice);
+    }
+    for(let i = 0; i < dice_list.length; ++i)
+    {
+        html += "<li>"+ dice_list[i] +"</li>";
+    }
+    document.getElementById('target').innerHTML = html;
+</script>
+</body>
+</html>

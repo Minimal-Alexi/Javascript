@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let nr_list = [], x = prompt("Enter a number");
+    while(!(x in nr_list))
+    {
+        nr_list.push(x);
+        x = prompt("Enter a number");
+    }
+    alert("The number was already in the list!")
+    nr_list.sort()
+    console.log(nr_list)
+</script>
+</body>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<ul id="target">
+
+</ul>
+<script>
+    candidates =
+        [
+            {
+                name:"ellie",
+                votes:0,
+            },
+            {
+                name:"frank",
+                votes:0,
+            },
+            {
+                name:"pamela",
+                votes:0,
+            }
+        ]
+    number_of_users = parseInt(prompt("Enter the number of voters."))
+    for(let i=0;i<number_of_users;++i)
+    {
+        selection = prompt("Enter the person you want to vote, user " + i);
+        if(selection <= 0 || selection > candidates.length)
+            alert("Vote passed");
+        else
+        {
+            candidates[selection - 1]["votes"]++;
+        }
+    }
+    candidates.sort(candidates["votes"]);
+    console.log("The winner is " + candidates[0]["name"] + " : " + candidates[0]["votes"]);
+    for(let i=1;i<candidates.length;++i)
+    {
+        console.log(candidates[i]["name"] + " : " + candidates[i]["votes"]);
+    }
+</script>
+</body>
+</html>
